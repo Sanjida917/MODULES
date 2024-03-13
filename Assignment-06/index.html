@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Daisy UI And Tailwind -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Mulish", sans-serif;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <!-- 
+    API
+    LatestPosts: - https://openapi.programming-hero.com/api/retro-forum/latest-posts
+    
+    AllPosts: - https://openapi.programming-hero.com/api/retro-forum/posts
+    
+    PostSearchByQuery
+    PostByQuery: - https://openapi.programming-hero.com/api/retro-forum/posts?category=categoryName
+    
+    Example
+    PostByQuery: - https://openapi.programming-hero.com/api/retro-forum/posts?category=coding
+ -->
+
+
+
+    <nav class="flex justify-between mx-16 my-5">
+
+        <h1 class="text-4xl font-extrabold rounded-full px-4 "><span
+                class="bg-gradient-to-r from-sky-700 to-cyan-300 inline-block text-transparent bg-clip-text hover:from-pink-500 hover:to-yellow-500 ...">SanPro</span>
+        </h1>
+
+
+        <div class="flex justify-between gap-4 ">
+
+            <img class="bg-zinc-200 rounded-full border-stone-300 border-2 px-3" title="tooltip" src="images/home.svg" alt="">
+            <img class="bg-zinc-200 rounded-full border-stone-300 border-2 px-3" src="images/write.svg" alt="">
+            <img class="bg-zinc-200 rounded-full border-stone-300 border-2 px-3" src="images/addfr.svg" alt="">
+            <img class="bg-zinc-200 rounded-full border-stone-300 border-2 px-3" src="images/flag.svg" alt="">
+            <button
+                class="btn border-stone-300 border-2 w-24 font-bold text-white text-lg rounded-full bg-[#797DFC]">Sign
+                In</button>
+
+        </div>
+
+    </nav>
+
+
+    <header>
+
+        <div class="bg-[#12132D] mx-16 rounded-2xl ">
+
+            <div class="flex gap-20">
+
+
+                <div class=" max-w-5xl w-full ">
+                    <div class=" max-w-3xl ml-28 max-h-full ">
+                        <div class="mt-52 w-full ">
+                            <h1 class="text-5xl text-white font-extrabold w-full my-6">Welcome to the <span
+                                    class="bg-gradient-to-r from-indigo-500 inline-block text-transparent bg-clip-text">SunPro</span>
+                                Forum</h1>
+                            <p class="text-[#FFFFFFCC] text-base">Share your favorite opinion and win and wp forum
+                                coffee mug!
+                            </p>
+                            <label class="input input-bordered flex items-center gap-2 my-6 max-w-xs rounded-full">
+                                <input id="category-search" type="text" class="grow" placeholder="Search Anything" />
+                                <button onclick="searchCategory()"><span
+                                        class=" w-20 py-2 px-5 text-white font-semibold rounded-full bg-[#797DFC] ">Search</span></button>
+
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="w-full flex items-center mt-52">
+                    <div
+                        class="flex text-stone-600 items-center gap-10 pl-10 rounded-xl text-lg font-bold bg-white w-72 h-52">
+
+                        <div>
+
+                            <p>Registered Users</p>
+                            <p>Forum</p>
+                            <p>Topics</p>
+                            <p>Replies</p>
+
+                        </div>
+                        <div>
+
+                            <p>01</p>
+                            <p>02</p>
+                            <p>03</p>
+                            <p>04</p>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <img class="bg-content w-full" src="images/bgbanner.png" alt="">
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <section>
+
+
+            <div class="w-full flex justify-center my-16">
+                <div class="justify-center">
+                    <h1 class="text-[#12132D] font-extrabold text-4xl text-center">Let’s Discuss</h1>
+                    <p class="text-[#12132D99] max-w-3xl text-lg text-center mt-6">Yes, you can run unit tests and view
+                        the
+                        results directly within the app. The integrated testing features allow for a streamlined .</p>
+                </div>
+            </div>
+
+
+            <div class="">
+
+                <!-- Spinner Or loader -->
+                <div id="loading-spinner" class="text-center my-20 hidden  text-teal-800">
+                    <span class="loading loading-dots loading-lg"></span>
+                </div>
+            </div>
+
+            <div class="flex justify-evenly">
+
+                <div id="post-container">
+
+
+                    <!-- <div class="card m-10 card-side max-w-2xl h-auto bg-base-100 shadow-xl">
+
+                        <div>
+                            <div class="avatar online placeholder ml-10 mt-10">
+                                <div class="bg-neutral   text-neutral-content rounded-full w-16">
+                                    <span class="text-xl">AI</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <div class="card-body gap-2">
+                                    <div class="flex justify-between  gap-2">
+                                        <button> #music </button>
+                                        <p>Author : Awal Hossain</p>
+                                    </div>
+
+                                    <div class="border-b-2 border-dashed pb-4">
+
+                                        <h2 class="card-title">10 Kids Unaware of Their Halloween Costume</h2>
+                                        <p>It’s one thing to subject yourself to ha Halloween costume mishap because,
+                                            hey that’s your
+                                            prerogative</p>
+                                    </div>
+
+                                    <div class="items-center h-full mt-5 ">
+                                        <div class="flex gap-2 items-center">
+                                            <img src="images/msg.svg" alt="">
+                                            <p> 560</p>
+                                            <img src="images/seen.svg" alt="">
+                                            <p> 1568</p>
+                                            <img src="images/clock.svg" alt="">
+                                            <p> 5 min</p>
+
+
+                                            <div class="card-actions justify-end">
+                                                <button onclick="selectedButton('${post.title}, ${post.view_count}')"
+                                                    class="btn "><img src="images/selectmsg.svg" alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div> -->
+
+                </div>
+
+
+                <div>
+
+                    <div id="select-store" class="card-body max-h-full hidden bg-teal-100 rounded-2xl border-2">
+                        <div class="flex justify-between font-bold">
+                            <h4>Title</h4>
+                            <h4>Marks As Read (<span id="count-total"> 0 </span>)</h4>
+                        </div>
+
+                        <div id="select-contaiiner">
+
+                            <!-- <div class="card w-96 h-20 card-body bg-base-100 mt-6 shadow-xl">
+                                <div class="flex justify-evenly">
+                                    <p>Introduction</p>
+                                    <div class="flex">
+                                        <img src="images/seen.svg" alt="">
+                                        <p>20</p>
+                                    </div>
+    
+                                </div>
+                                </div>  -->
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <section>
+            <div class="bg-[#12132D] mx-16 rounded-2xl ">
+
+                <div class="flex gap-44 items-center">
+
+                    <div class=" max-w-5xl w-full ">
+                        <div class=" max-w-3xl ml-28 max-h-full ">
+                            <div class="my-20 w-full ">
+                                <h1 class="mt-6 text-5xl text-white font-extrabold w-full my-6">Join Our Forum</h1>
+                                <p class="my-6 text-[#FFFFFFCC] text-base">Share your favorite opinion and win and wp
+                                    forum
+                                    coffee mug! Yes, you can run unit tests and view the results directly within the
+                                    app.
+                                </p>
+                                <button class="btn btn-wide border-none rounded-full bg-[#797DFC]">Register Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <img class="mr-20" src="images/joinforum.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section>
+            <div class="w-full flex justify-center my-16">
+                <div class="justify-center">
+                    <h1 class="font-extrabold text-4xl text-center text-[#12132D]">Latest Posts</h1>
+                    <p class="text-[#12132D99] max-w-3xl text-lg text-center mt-6">Yes, you can run unit tests and view
+                        the
+                        results directly within the app. The integrated testing features allow for a streamlined .</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 justify-center" id="latest-post">
+
+                <!-- 
+            <div class="card w-96 bg-base-100  shadow-xl">
+                <figure class="px-10 pt-10">
+                    <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
+                        class="rounded-xl" />
+                </figure>
+
+
+                <div class="card-body items-start text-center">
+                    <div class="flex gap-2">
+                        <img src="images/date.svg" alt="">
+                        <p>date</p>
+                    </div>
+                    <h2 class="card-title text-justify">What will a mars habitat force that impact in our daily life!!!</h2>
+                    <p class="text-justify">Yes, you can run unit tests and view the results directly within the app. </p>
+                    <div class="flex items-center" >
+                        <img class="w-8 h-8 bg-slate-500 rounded-full" src="images/logo.png " alt="">
+                        <div class="">
+
+                            <h5 class="ml-6 text-left">Cameron Williamson</h5>
+                            <p class=" ml-6 text-left">unknown</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <footer class="footer p-10 mt-20 bg-[#12132D0D] text-neutral-content">
+
+
+        <div class="w-full flex justify-center my-5">
+            <div class="justify-center">
+                <h1 class="font-extrabold text-4xl text-center text-[#12132D]">SunPro</h1>
+                <p class="text-[#12132D99] max-w-3xl text-lg text-center mt-6">Contrary to popular belief, Lorem Ipsum
+                    is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+
+                <div class="flex justify-center">
+                    <img class="my-10  mx-0 " src="images/ocial.svg" alt="">
+                </div>
+
+
+                <hr>
+
+
+                <p class="text-[#12132D99] max-w-3xl text-base mt-10 text-center font-light"> 2024 , All right reserved
+                </p>
+
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!-- JS link -->
+    <script src="js/retro.js"></script>
+</body>
+
+</html>
