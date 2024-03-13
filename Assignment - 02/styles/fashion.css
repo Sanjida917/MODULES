@@ -1,0 +1,1125 @@
+/* All Shared Styles */
+body {
+
+    font-family: 'Mulish';
+}
+
+.shared-margin {
+    margin: 0 auto;
+}
+
+.gray-color {
+    color: var(--Dark-02, #424247);
+}
+
+.fade-gray-and-common-fonts {
+
+    color: rgba(19, 19, 24, 0.70);
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.orange-color {
+    color: #FF5400;
+}
+
+.bold-title {
+    color: #131318;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+
+}
+
+
+
+.head-nav {
+    margin: 0 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.nav-bar {
+    gap: 44px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+
+.background-items {
+    background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(../images/bground.png);
+
+    width: 1170px;
+    height: 500px;
+    border-radius: 16px;
+
+}
+
+.find-search {
+    width: 130px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.find-now {
+
+    border: none;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: #FF5400;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.search-btn {
+
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+
+
+}
+
+.background-title {
+
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.background-description {
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    max-width: 650px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.where-go {
+    border: #FF5400;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 8px;
+    width: 150px;
+    height: 20px;
+}
+
+.when {
+    border: #FF5400;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 8px;
+    width: 150px;
+    height: 20px;
+}
+.select-type {
+    height: 20px;
+    border: #FF5400;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 8px;
+    width:150px;
+}
+
+.lol {
+   position: relative;
+   top: -20px;
+
+    margin-left: 120px;
+}
+
+.background-bars {
+
+   
+    width: 180px;
+    margin: 30px 100px 50px 250px;
+    display: inline-flex;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+
+
+
+}
+
+.main-title {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.popular-tour {
+    margin-top: 100px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.tour-title {
+    text-align: left;
+
+}
+
+.tour-dtails {
+    text-align: left;
+    justify-items: left;
+    max-width: 550px;
+    height: 700px;
+}
+
+/* Main Section Started */
+
+
+
+.places-titles {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+
+}
+
+.tour-places {
+    position: relative;
+    margin-left: 80px;
+}
+
+.maldive {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), url(../images/mald.png);
+    width: 573px;
+    height: 300px;
+    border-radius: 16px;
+
+}
+
+.indonesia {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), url(../images/indo.png);
+    width: 576px;
+    height: 300px;
+    position: absolute;
+    top: 1px;
+    left: 588px;
+    border-radius: 16px;
+
+}
+
+.srilanka {
+    position: absolute;
+    top: 335px;
+    width: 374px;
+    height: 286px;
+    border-radius: 16px;
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), url(../images/srilanka.png);
+}
+
+.north-america {
+
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), url(../images/north.png);
+    width: 474px;
+    height: 286px;
+    border-radius: 16px;
+    position: absolute;
+    top: 332px;
+    left: 400px;
+
+}
+
+.kashmir {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), url(../images/kashmir.png);
+    width: 274px;
+    height: 286px;
+    border-radius: 16px;
+    position: absolute;
+    top: 332px;
+    left: 900px;
+
+}
+
+.bangladesh {
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), url(../images/bd.png);
+    width: 473px;
+    height: 300px;
+    border-radius: 16px;
+    position: absolute;
+    top: 640px;
+
+
+
+}
+
+.bandarban {
+
+    background-image: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%), url(../images/bandarban.png);
+    width: 673px;
+    height: 300px;
+    border-radius: 16px;
+    position: absolute;
+    top: 640px;
+    left: 500px;
+
+}
+
+.list-cards {
+    padding-top: 700px;
+}
+
+.country-tour-des {
+    margin: 0 auto;
+    max-width: 650px;
+    text-align: center;
+}
+
+
+.two-cards {
+    
+    margin-top: 50px;
+    display: flex;
+    justify-content:space-evenly;
+    gap: 0;
+    margin-bottom: 30px;
+
+
+
+}
+
+.card-des {
+    max-width: 370px;
+    text-align: justify;
+}
+
+.card1 {
+
+    border-radius: 16px;
+    background: rgba(233, 68, 68, 0.05);
+    border: 1px solid rgba(251, 181, 99, 0.20);
+    max-width: 400px;
+    max-height: 250px;
+    padding: 20px 150px 20px 30px;
+
+
+}
+
+.single-card {
+    margin: 0 auto;
+    border-radius: 16px;
+    background: rgba(233, 68, 68, 0.05);
+    border: 1px solid rgba(251, 181, 99, 0.20);
+    max-width: 350px;
+    max-height: 250px;
+    padding: 20px 150px 20px 30px;
+}
+
+.card2 {
+    border: 1px solid rgba(41, 206, 246, 0.20);
+    background: rgba(41, 206, 246, 0.05);
+    max-width: 500px;
+    max-height: 250;
+    padding: 20px 150px 20px 30px;
+    border-radius: 16px;
+}
+
+.image-1 {
+
+    background-image: url(../images/view1.png);
+    width: 1170px;
+    height: 500px;
+    border-radius: 16px;
+}
+
+.image-2 {
+
+    background-image: url(../images/view2.png);
+    width: 1170px;
+    height: 500px;
+    border-radius: 16px;
+}
+
+
+.image-3 {
+
+    background-image: url(../images/view1.png);
+    width: 1170px;
+    height: 500px;
+    border-radius: 16px;
+}
+
+.upper-sec {
+    display: flex;
+    gap: 10px;
+}
+
+.satorini-title {
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.satorini-des {
+
+    width: 400px;
+    color: #5A5A5D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    overflow-x: hidden;
+}
+
+
+.bg-images {
+    position: relative;
+
+
+}
+
+
+.box {
+    padding: 50px;
+    width: 450px;
+    height: 300px;
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2.5px);
+    position: absolute;
+    top: 50px;
+    left: 570px;
+
+}
+
+.box-2 {
+
+    padding: 50px;
+    width: 450px;
+    height: 300px;
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2.5px);
+    position: absolute;
+    top: 570px;
+    left: 50px;
+
+}
+
+.box-3 {
+
+    padding: 50px;
+    width: 450px;
+    height: 300px;
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2.5px);
+    position: absolute;
+    top: 1100px;
+    left: 550px;
+
+}
+
+.deal-btn {
+    margin-top: 50px;
+    margin-left: 450px;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.deals-discounts {
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+.country-tour-des {
+    margin-bottom: 50px;
+}
+
+
+.per-place-des,
+.newslatter-des {
+    color: #5A5A5D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.per-img-des {
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.nature-bg-img {
+    background: linear-gradient(180deg, #131318 -31.96%, rgba(19, 19, 24, 0.00) 100%), url(../images/nature.png);
+    width: 610px;
+    height: 424px;
+    flex-shrink: 0;
+    border-radius: 16px;
+
+
+
+}
+
+.natural-beauty {
+    margin: 100px 80px 10px 80px ;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: left;
+
+}
+
+
+.perfect-place h1 {
+
+    text-align: left;
+}
+
+.new-add {
+
+    margin-top: 20px;
+    margin-left: 0;
+
+}
+
+.video-icon {
+    position: relative;
+}
+
+.vdo-icn-1 {
+    position: absolute;
+    top: -130px;
+    left: 555px;
+    width: 24px;
+    height: 24px;
+    background-color: 2px solid #FF5400;
+}
+
+.vdo-icn-2 {
+    position: absolute;
+    top: -130px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+    background-color: 10px solid #ed5e17;
+}
+
+.vdo-icn-3 {
+    position: absolute;
+    width: 87px;
+    height: 4px;
+    top: -90px;
+    left: 20px;
+    background-color: 2px solid #FF5400;
+}
+
+.vdo-icn-4 {
+    position: absolute;
+    top: -130px;
+    left: 520px;
+    width: 24px;
+    height: 24px;
+    background-color: 2px solid #FF5400;
+}
+
+.vdo-icn-5 {
+    position: absolute;
+    top: -130px;
+    left: 480px;
+    width: 24px;
+    height: 24px;
+    background-color: 2px solid #FF5400;
+}
+
+.vdo-icn-6 {
+
+    color: var(--Dark-07, #F3F3F3);
+    position: absolute;
+    top: -145px;
+    left: 60px;
+
+
+}
+
+.vdo-icn-7 {
+    width: 562px;
+    height: 4px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    position: absolute;
+    top: -106px;
+    left: 20px;
+
+
+}
+
+.newslatter-part {
+ 
+    width: 374px;
+    height: 315px;
+    border-radius: 16px;
+    border: 1px solid #FF5400;
+    padding: 50px;
+}
+
+.newslatter-title {
+    margin-top: 0;
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+
+}
+
+.newslatter-view {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.newslatter-view .view-part {
+
+    background-image: url(../images/beautiful.png);
+    width: 672px;
+    height: 422px;
+    border-radius: 16px;
+
+}
+
+.newslatter-part input {
+    width: 380px;
+    height: 52px;
+    border-radius: 8px;
+    background: rgba(19, 19, 24, 0.05);
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+
+
+}
+
+.subs-btn {
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 15px 161px;
+    border-radius: 8px;
+}
+
+.decor-btn {
+    width: 300px;
+    height: 110px;
+    transform: rotate(-25deg);
+    border-radius: 16px;
+    background: #FF5400;
+    margin-top: 260px;
+    margin-left: 365px;
+}
+
+.foot {
+
+    margin-top: 100px;
+    background: rgba(19, 19, 24, 0.05);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.footer-foot {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.foot-title {
+
+    color: #131318;
+    font-size: 32px;
+    font-weight: 800;
+
+}
+
+.feet-des {
+    color: #5A5A5D;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    width: 769px;
+    padding-bottom: 20px;
+}
+
+.social-feet {
+
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-line {
+    margin: 50px;
+    width: 872px;
+    height: 1px;
+    background: rgba(19, 19, 24, 0.10);
+}
+
+.copy {
+    color: #131318;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+
+
+
+/* Responsive Designs Started */
+/* Responsive designs for mobile */
+@media screen and (max-width : 600px) {
+
+    body{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .shared-margin {
+        margin: 0 auto;
+    }
+
+    .background-items {
+        border-radius: 16px;
+        width: 350px;
+        height: 483px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .background-title {
+        margin: 40px;
+        display: flex;
+        text-align: center;
+        justify-content: baseline;
+        padding-top: 20px;
+        font-size: 1.5rem;
+
+    }
+
+    .background-description {
+        margin: 0 auto;
+        color: #FFF;
+        text-align: center;
+        max-width: 650px;
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1rem;
+    }
+
+    .head-nav {
+        flex-direction: column;
+    }
+
+    .background-bars {
+
+        align-items: center;
+        margin: 10px 50px 10px 60px;
+        display: inline-flex;
+        padding: 16px;
+        align-items: flex-start;
+        gap: 24px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.30);
+
+        flex-direction: column;
+    }
+
+    .popular-tour {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .tour-dtails {
+        text-align: justify;
+        justify-items: left;
+        max-width: 550px;
+        height: 700px;
+    }
+
+    .hill img {
+        width: 335px;
+        height: 342px;
+    }
+
+    .tour-places {
+        position: absolute;
+        display: grid;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .maldive {
+
+        width: 335px;
+        height: 176px;
+        border-radius: 16px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .indonesia {
+
+        width: 335px;
+        height: 176px;
+        top: 185px;
+        left: 00px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .srilanka {
+
+        width: 335px;
+        height: 176px;
+        top: 370px;
+        left: 00px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .north-america {
+
+        width: 335px;
+        height: 176px;
+        top: 555px;
+        left: 00px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .kashmir {
+
+        width: 335px;
+        height: 176px;
+        top: 740px;
+        left: 00px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bangladesh {
+
+        width: 335px;
+        height: 176px;
+        top: 930px;
+        left: 00px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bandarban {
+
+        width: 335px;
+        height: 176px;
+        top: 1120px;
+        left: 00px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .list-cards {
+        position: relative;
+        top: 600px;
+    }
+
+    .two-cards {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .deals-discounts {
+        margin-top: 700px;
+    }
+
+    .bg-images{
+
+        margin: 0 auto;
+
+        position: relative;
+        left: 80px;
+    }
+
+    .book-btn{
+        position: relative;
+        left: 110px;
+    }
+    .card1,
+    .single-card {
+        margin-bottom: 30px;
+        max-height: 300px;
+    }
+
+    .image-1,
+    .image-2,
+    .image-3 {
+
+        width: 350px;
+        height: 500px;
+
+    }
+
+    .box,
+    .box-2,
+    .box-3 {
+        padding: 10px;
+        width: 300px;
+        height: 280px;
+        position: absolute;
+        top: 175px;
+        left: 12px;
+        line-height: 15px;
+    }
+
+    .box-2 {
+        top: 695px;
+        left: 10px;
+    }
+
+    .box-3 {
+
+        top: 1215px;
+        left: 10px;
+    }
+
+    .satorini-title {
+        color: #131318;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .satorini-des {
+
+        width: 300px;
+        margin-top: 0;
+        padding-top: 0;
+        overflow-x: auto;
+
+    }
+
+    .natural-beauty {
+        margin-top: 0px;
+        display: flex;
+        gap: 20px;
+
+        text-align: left;
+        flex-direction: column;
+    }
+
+    .bold-title {
+        margin-top: 0;
+        color: #131318;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .deal-btn {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        color: #FFF;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .nature-bg-img {
+
+        width: 335px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .places-titles {
+        height: 50%;
+        font-size: 20px;
+    }
+
+    .vdo-icn-1 {
+        top: 20px;
+        left: 300px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .vdo-icn-4 {
+        top: 20px;
+        left: 270px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .vdo-icn-5 {
+        top: 20px;
+        left: 230px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .vdo-icn-6 {
+        top: 5px;
+        left: 40px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .vdo-icn-7 {
+        top: 30px;
+        left: 10px;
+        width: 310px;
+        height: 3px;
+
+    }
+
+    .vdo-icn-3 {
+        top: 47px;
+        left: 7px;
+        width: 50px;
+        height: 2px;
+
+    }
+
+    .vdo-icn-2 {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+
+    }
+
+    .newslatter-view {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .newslatter-part {
+        margin: 0 auto;
+        width: 345px;
+        height: 350px;
+        padding: 20px 20px 0 20px;
+        margin-bottom: 40px;
+    }
+
+
+    .newslatter-part input {
+        width: 300px;
+        height: 40px;
+
+    }
+
+    .subs-btn {
+
+        width: 315px;
+        height: 40px;
+        padding: 25px 130px 25px 130px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .newslatter-view .view-part {
+        width: 335px;
+        height: 300px;
+    }
+
+    .decor-btn {
+        width: 215px;
+        height: 90px;
+        transform: rotate(-30deg);
+        margin-top: 170px;
+        margin-left: 115px;
+        line-height: 20px;
+        padding: 0;
+    }
+
+    .foot {
+        width: 100%;
+        height: 309px;
+        margin-bottom: 200px;
+        padding-bottom: 200px;
+    }
+
+    .foot-title {
+        color: #131318;
+        font-size: 26px;
+        font-weight: 800;
+    }
+
+    .feet-des {
+        color: #5A5A5D;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        width: 300px;
+        padding-bottom: 20px;
+    }
+    .foot-line {
+
+        margin: 10px;
+        width: 100%;
+        height: 1px;
+        background: rgba(19, 19, 24, 0.10);
+    }
+
+    .copy {
+        color: #131318;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 100px;
+    }
+
+}
