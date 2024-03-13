@@ -1,0 +1,351 @@
+/* applied font style */
+body {
+
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.header {
+    background-color: #FFF8F3;
+    background-image: url('../images/header_bg.png'), url('../images/developer.png');
+    background-repeat: no-repeat;
+    background-position: bottom right, top left;
+    
+}
+
+.section-title {
+
+    color: #181818;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.section-description {
+    color: #757575;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.info-description {
+    color: #474747;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.info-title {
+
+    color: #757575;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+   
+}
+
+/* the nav elements are in the same block.so changes the display as a same line */
+.nav {
+    display: flex;
+    /* justify-content: space-around;  -->The the elements are in the same distance in a single line */
+    justify-content: space-between;
+    /*all the elements are in the highest distance in between a single line*/
+    align-items: center;
+    margin: 0 200px;
+
+}
+
+.nav-title {
+    color: #181818;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+/* color of Atextin title name "Sanjida Mahfuj" */
+.a-color {
+    color: #FD6E0A;
+    font-size: 55px;
+    font-weight: 700;
+    text-shadow: 3px 3px 3px rgb(76, 67, 67);
+
+}
+
+.btn-primary {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    background: #FD6E0A;
+    border-radius: 5px;
+    border: 0;
+    padding: 16px 30px;
+
+}
+
+#contact-btn {
+
+    color: #FD6E0A;
+    font-size: 20px;
+    font-weight: 700;
+    border: 3px solid #FD6E0A;
+    background: #FFF;
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin-left: 20px;
+}
+
+/* the immidiate(first) ul of nav, ul list are in the same line  */
+nav>ul {
+    display: flex;
+    align-items: center;
+    /*The items will be centered in a sigle line*/
+}
+
+/* all lists of nav are not with list type .all are without any bullets */
+nav li {
+    list-style: none;
+    margin-right: 50px;
+    /*margined 50 px right of all the ul elements of nav */
+
+}
+
+
+/* the text decoration of the anchors are not to be underlined and with a specified color */
+nav a {
+    text-decoration: none;
+    color: #474747;
+}
+
+.banner {
+    padding: 145px 30px 0px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.banner-content {
+    max-width: 585px;
+}
+
+.banner .profile-pic {
+    width: 500px;
+    padding: 0;
+    padding-right: 00px;
+
+}
+
+.banner-greeting {
+
+    font: 50px;
+    font-weight: 600;
+    color: #474747;
+    margin-bottom: 0;
+}
+
+.banner-title {
+
+    color: #393939;
+    font-size: 50px;
+    font-weight: 800;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+
+}
+
+main {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+main section {
+    margin-top: 130px;
+}
+
+.banner-description {
+    color: #757575;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+/* main section styles */
+
+/* about section styles */
+
+.about {
+
+    padding: 130px;
+    border-radius: 10px;
+    background-color: #FFF8F3;
+    margin: 130px 0;
+
+}
+
+.about-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.about-info {
+    text-align: center;
+}
+
+#what-i-do-description {
+    color: #757575;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 30px 150px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+
+
+}
+
+.skill {
+
+    padding: 20px 33px 30px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06)
+}
+
+.skill-description {
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.skil-title {
+    color: #181818;
+    text-align: center;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+/* resume section styles */
+
+.resume-column-title {
+    color: #474747;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.resume-container {
+
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.remume-column {
+    padding: 30px;
+}
+
+.resue-item-title {
+    color: #474747;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 10px;
+
+}
+
+
+.resume-item-institute {
+
+    color: #757575;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.resume-item-description {
+
+    color: #757575;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    max-width: 500px;
+}
+
+.remume-column hr {
+
+    margin: 20px 0;
+    width: 550px;
+}
+
+.download-cv {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+
+
+footer {
+    background-color: #FFF8F3;
+    ;
+    display: flex;
+    gap: 100px;
+    margin-top: 100px;
+    padding: 130px 200px;
+
+}
+
+#foot-title {
+    margin: 0;
+    padding-bottom: 20px;
+    color: #181818;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.foot-section-description {
+    margin-left: 0px;
+    color: #757575;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+
+
+.social-ink a {
+    margin-right: 25px;
+}
+
+.footer-column {
+
+    width: 50%
+}
+
+.contact{
+    padding-top: 20px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+textarea {
+
+    display: block;
+    color: #757575;
+    padding: 18px 35px;
+    margin-bottom: 25px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    background: #FFFF;
+}

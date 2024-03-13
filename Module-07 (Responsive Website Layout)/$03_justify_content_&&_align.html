@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify And Align</title>
+
+
+    <style>
+        .box {
+
+            color: brown;
+            margin: 15px;
+            border: 15px dashed rgb(12, 102, 112);
+            height: 100px;
+            width: 100px;
+        }
+
+
+        .container1 {
+
+            margin-left: 150px;
+            border: 15px solid salmon;
+            height: 700px;
+            width: 700px;
+            display: flex;
+            /*Justify-content:center and Align-items:center together 
+            make horizontally and vertivally middle*/
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .container2{
+
+            margin-left: 150px;
+            border: 15px solid salmon;
+            height: 700px;
+            width: 700px;
+            display: flex;
+            /*Justify-content:end and Align-items:center together 
+            make horizontally middle but vertivally end*/
+            justify-content:end;
+            align-items: center;
+        }
+        .container3{
+
+            margin-left: 150px;
+            border: 15px solid salmon;
+            height: 700px;
+            width: 700px;
+            display: flex;
+            justify-content:baseline;
+            align-items: center;
+        }
+        .container4{
+
+            margin-left: 150px;
+            border: 15px solid salmon;
+            height: 700px;
+            width: 700px;
+            display: flex;
+            justify-content:center;
+            align-items:baseline;
+        }
+        .container5{
+
+            margin-left: 150px;
+            border: 15px solid salmon;
+            height: 700px;
+            width: 700px;
+            display: flex;
+            justify-content:end;
+            align-items:end;
+        }
+
+
+
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <div class="container1">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+
+    </div>
+    <div class="container2">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+
+    </div>
+    <div class="container3">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+
+    </div>
+    <div class="container4">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+
+    </div>
+    <div class="container5">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+
+    </div>
+
+
+</body>
+
+</html>

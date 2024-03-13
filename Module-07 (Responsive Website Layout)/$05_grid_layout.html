@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+
+        .container1{
+            /*no change only with grid*/
+            display: grid;
+        }
+        .container2{
+            /*grid-template-columns breaks the columns with border size*/
+            margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px;
+        }
+        .container3{
+            /*grid-template-columns breaks the columns with border size*/
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 200px;
+        }
+        .container4{
+            /*three values indecate the column number and sized of every column*/
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+        }
+        .container5{
+            /*number of values indecate the column number and sized of every column*/
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 100px 300px 500px;
+        }
+        .container6{
+            /*number of values indecate the column number and sized of every column*/
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 50px 100px 200px 300px 400px 500px;
+        }
+        .container7{
+            /*Here I can give only two values : (number of columns , column size) */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns:repeat(3,200px);
+        }
+        .container8{
+            /*Here I can give also this : (number of columns , column size) another column with column sizes */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns:repeat(3,200px) 50px;
+        }
+        .container9{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns:repeat(3,1fr);
+        }
+        .container10{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns:repeat(6,1fr) 2fr;
+        }
+        .container11{
+           /*Here the auto columns automatically takes the rest size after taking the fixed sizes */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns:100px auto 300px;
+        }
+        .container12{
+            /*Here the auto columns automatically takes the rest size after taking the fixed sizes */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns:100px 50px auto;
+        }
+        .container13{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns:repeat(4,100px);
+            justify-content: center;
+        }
+        .container14{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns:repeat(4,100px);
+            justify-content:space-between;
+        }
+        .container15{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-rows:200px 200px;
+            justify-content: center;
+        
+        }
+        .container16{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-rows:200px 200px;
+           align-items: center;
+        
+        }
+
+        .container17{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-rows:200px 200px;
+           align-items: center;
+           justify-content: center;
+        
+        }
+        .container18{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-rows:200px 200px;
+           align-items: center;
+           justify-content:end;
+        
+        }
+        .container19{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-rows:200px 200px;
+           align-items: end;
+           justify-content: center;
+        
+        }
+        .container20{
+            /*Here the columns automatically divides the columns with equal size */
+             margin-top: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-rows:200px 200px;
+           align-items:stretch;
+           justify-content: end;
+        
+        }
+
+
+
+        .item{
+            border: 1px solid aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Usually flex layout works in one direction(Vertically or horizontally) but grid layout works on two direction(Vertically and horizontally) -->
+
+    <h2>Explore Grid layout : 2D Layout</h2>
+
+    <h3>GRID-01</h3>
+    <div class="container1">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+
+    <h3>GRID-02</h3>
+    <div class="container2">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+    <h3>GRID-03</h3>
+    <div class="container3">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+
+    <h3>GRID-04</h3>
+    <div class="container4">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+
+
+    <h3>GRID-05</h3>
+    <div class="container5">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+
+
+    <h3>GRID-06</h3>
+    <div class="container6">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+
+
+    <h3>GRID-07</h3>
+    <div class="container7">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+
+
+    <h3>GRID-08</h3>
+    <div class="container8">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+
+
+    <h3>GRID-09</h3>
+    <div class="container9"> 
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+
+
+    <h3>GRID-10</h3>
+    <div class="container10">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+    <h3>GRID-11</h3>
+    <div class="container11">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+    <h3>GRID-12</h3>
+    <div class="container12">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+    <h3>GRID-13</h3>
+    <div class="container13">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+    <h3>GRID-14</h3>
+    <div class="container14">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+        <div class="item">item-5</div>
+        <div class="item">item-6</div>
+        <div class="item">item-7</div>
+        <div class="item">item-8</div>
+        <div class="item">item-9</div>
+        <div class="item">item-10</div>
+        <div class="item">item-11</div>
+        <div class="item">item-12</div>
+        <div class="item">item-13</div>
+        <div class="item">item-14</div>
+        <div class="item">item-15</div>
+        <div class="item">item-16</div>
+        <div class="item">item-17</div>
+        <div class="item">item-18</div>
+        <div class="item">item-19</div>
+        <div class="item">item-20</div>
+    </div>
+    <h3>GRID-15</h3>
+    <div class="container15">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+       
+    </div>
+    <h3>GRID-16</h3>
+    <div class="container16">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+      
+    </div>
+    <h3>GRID-17</h3>
+    <div class="container17">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+       
+    </div>
+    <h3>GRID-18</h3>
+    <div class="container18">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+     
+    </div>
+    <h3>GRID-19</h3>
+    <div class="container19">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+      
+    </div>
+    <h3>GRID-20</h3>
+    <div class="container20">
+        <div class="item">item-1</div>
+        <div class="item">item-2</div>
+        <div class="item">item-3</div>
+        <div class="item">item-4</div>
+     
+    </div>
+
+</body>
+
+</html>

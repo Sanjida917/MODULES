@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+
+    <style>
+
+        h3{
+            color: peru;
+        }
+
+        /*Hover means - Mouse over*/
+        h3:hover{
+
+            color: blueviolet;
+            background-color: cadetblue;
+        }
+
+        input:focus{
+            color: brown;
+            outline: 0;
+            border: 3px solid royalblue;
+        }
+
+        /*We can change the visited link color which is purple color by default*/
+        a:visited{
+            color: thistle;
+        }
+
+        li:last-child{
+            color: blueviolet;
+            background-color: aquamarine;
+        }
+
+       ul li:nth-child(2n){
+        color: chartreuse;
+       }
+
+        ol li:nth-child(2n+1){
+            color: rgb(55, 47, 47);
+            background-color: rgb(79, 169, 169);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3>My Heading</h3>
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+
+<br><br>
+
+<!-- By-defaultvisited links color is purple and non visited links are in blue color -->
+    <a href="https://www.google.com/">Google</a> <br>
+    <a href="https://www.visitphilly.com/">Pennsylvania</a>
+
+
+    <ul class="fl-lst">
+        <li>Dahlia</li>
+        <li>Tulip</li>
+        <li>Marygold</li>   
+        <li>Rose</li>
+        <li>Orchid</li>
+        <li>Tube-rose</li>
+        <li>Dephodil</li>
+    </ul>
+
+
+    <ol class="fl-li">
+        <li>Dahlia</li>
+        <li>Tulip</li>
+        <li>Marygold</li>   
+        <li>Rose</li>
+        <li>Orchid</li>
+        <li>Tube-rose</li>
+        <li>Dephodil</li>
+    </ol>
+
+</body>
+</html>
