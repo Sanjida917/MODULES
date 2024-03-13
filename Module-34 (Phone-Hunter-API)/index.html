@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+
+
+    <!-- DaisyUI and CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <h1 class="text-5xl ">Hunting Phone</h1>
+    <header></header>
+    <main class="container mx-auto mt-8">
+
+<!-- Move-07 -->
+        <section class="bg-gray-100 px-5 my-4 py-4 rounded-md ">
+            <input id="search-field" type="text" placeholder="Search..."
+                class="input input-bordered lg:w-full max-w-6xl bg-stone-500 border-gray-700 border-2 text-white" />
+            <button onclick="handleSearch()"
+                class="btn bg-stone-500 border-gray-700 border-2 hover:bg-yellow-700 btn-accent">Search</button>
+        </section>
+
+        <!-- Search Result -->
+        <section>
+
+
+            <!-- Spinner Or loader -->
+            <div id="loading-spinner" class="text-center my-40 hidden text-teal-800">
+                <span class="loading loading-dots loading-lg"></span>
+            </div>
+
+        <!-- Move-04 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 md:gap-2 " id="phone-container">
+
+                <!-- <div class="card w-96 bg-gray-100 shadow-xl">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                            alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Shoes!</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div class="hidden text-center my-10" id="show-all-container">
+                <button onclick="handleShowAll()" type="button"
+                    class="py-3 text-lg font-bold text-stone-500 px-10 rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">
+                    Show All
+                </button>
+                <!-- <button class="btn btn-success"></button> -->
+            </div>
+
+
+        </section>
+
+
+        <!-- Show Details Modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="">open modal</button> -->
+        <dialog id="details_modal" class="modal modal-bottom sm:modal-middle max-w-fit h-fit p-6 justify-center">
+            <div class="modal-box">
+                <h3 id="show-details-phone-name" class="font-bold text-3xl"></h3>
+
+                <div class="flex justify-center w-full">
+
+                    <div id="show-details-container" class="justify-center"></div>
+
+                </div>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+    </main>
+    <footer></footer>
+
+
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
