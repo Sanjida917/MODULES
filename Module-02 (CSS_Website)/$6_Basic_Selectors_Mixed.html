@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Selectors</title>
+
+    <style>
+       
+        *{
+            margin: 20px;
+        }
+
+        li, p {
+            background-color: rgba(134, 101, 119, 0.623);
+        }
+        #fifth,p{
+
+            color: rgb(76, 43, 107);
+           font-size: large;
+        }
+
+        .yellow{
+
+            background-color: yellowgreen;
+        }
+
+        .bold{
+            font-weight: 900;
+        }
+
+        .eight,.ten{
+            background-color: darkkhaki;
+        }
+
+        .backclr{
+            background-color: aquamarine;
+        }
+
+        .font{
+            font-family: serif;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h1>Explore Mixed Selectors </h1>
+<p>This Is My first line</p>
+<p class="yellow bold">This Is My second line</p>
+<p>This Is My third line</p>
+<p class="bold">This Is My fourth line</p>
+<p id="fifth" class="bold">This Is My fifth line</p>
+<p class="yellow">This Is My sixth line</p>
+<p>This Is My seventh line</p>
+<p class="eight">This Is My eighth line</p>
+<p>This Is My ninth line</p>
+<p class="ten">This Is My tenth line</p>
+
+
+<ul>
+<li>Element Selector</li>
+<li class="bold backclr">ID Selector</li>
+<li>Class Selector</li>
+<li class="backclr font">Universal Selector</li>
+
+</ul>
+    
+</body>
+</html>

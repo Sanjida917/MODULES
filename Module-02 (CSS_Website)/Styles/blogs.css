@@ -1,0 +1,65 @@
+
+
+h1 {
+
+    color: rgb(109, 41, 79);
+    background-color: rgba(168, 146, 116, 0.459);
+    font-size: 30px;
+
+}
+
+li {
+    color: rgb(68, 68, 110);
+    font-style: italic;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    text-align: center;
+    height: 900px;
+    padding: 10px;
+
+    background-image: url('../images/bpic3.jpg');
+    /* background-image: url(bpic.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+
+    /* background-size: cover; */
+    background-size: contain;
+    /* background-size: 350px; */
+}
+
+.second {
+
+    /* display: none; */
+    /* visibility: hidden; */
+
+}
+
+.blog3 {
+    margin: 40px;
+    border: 10px solid rgb(131, 59, 101);
+    padding: 20px;
+    box-shadow: 20px 20px 20px rgb(233, 126, 206);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 800px;
+    width: 200px;
+}
+
+.bmodel {
+    color: rgb(70, 98, 102);
+    font-size: larger;
+    font-weight: 700;
+    text-shadow: 1px 1.5px;
+    border: 2px solid rgb(70, 98, 102);
+    background-color: blanchedalmond;
+
+}
+
+.dis{
+
+    border: 2px solid rgb(61, 29, 102);
+    background-color: rgba(150, 108, 124, 0.63);
+}

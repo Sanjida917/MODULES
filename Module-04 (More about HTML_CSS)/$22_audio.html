@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/style2.css">
+</head>
+<body>
+    <h1>Add Audio - Way 1</h1>
+
+
+    <!-- without "controls" keyword it will not work. -->
+    <audio src="../assets/inside-you-162760.mp3"></audio> 
+    
+
+     <!-- This is the right way -->
+    <audio controls src="../assets/inside-you-162760.mp3"></audio>
+
+
+    <h1>Add Audio - Way 2</h1> 
+    
+
+     <!-- This is the another right way -->
+    <audio controls > <source src="../assets/inside-you-162760.mp3"> </audio>
+
+
+</body>
+</html>

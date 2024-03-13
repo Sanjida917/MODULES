@@ -1,0 +1,35 @@
+
+nav > ul{
+
+    display: flex;
+}
+
+nav li{
+
+    list-style: none;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+nav li:hover{
+    background-color: rgba(68, 148, 122, 0.736);
+}
+nav li a {
+
+    text-decoration:none;
+    color: black;
+}
+
+/* nasted manue styles */
+
+nav li .dropdown{
+
+    display: none;
+    position: absolute;
+    background-color: rgba(232, 188, 129, 0.595);
+    padding-left: 10px;
+}
+
+nav li:hover .dropdown{
+    display: block;
+}

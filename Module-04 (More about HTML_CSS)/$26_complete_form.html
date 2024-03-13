@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Form</title>
+    <link rel="stylesheet" href="Styles/style2.css">
+
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: rgb(72, 127, 109);
+
+        }
+
+        input {
+
+            background-color: bisque;
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h2>Please Fill Up The Form</h2>
+    <form>
+
+        <label for="name">Enter Your Name:
+            <input id="name" type="text" placeholder="Your Name">
+        </label>
+        <label for="email">Enter Your Email:
+            <input id="emial" type="email" placeholder="Your Email">
+        </label>
+        <label for="phn number">Enter Your Phone Number:
+            <input id="phn number" type="text" placeholder="Your Phone Number">
+        </label>
+
+        <br><br>
+
+        <fieldset>
+
+            <!-- In a radio type input, if we give the same name in "name ="" " place but different id name, then we can choose any one option fromthe option list. Other wise we can choose all the options from the list-->
+
+            <legend>Pick One Pithaa</legend>
+            <label for="chitooi"> <input type="radio" name="pitha" id="chitoi"> Chitoi </label>
+            <label for="vapa"><input type="radio" name="pitha" id="vapa"> Vapa </label>
+            <label for="puri"> <input type="radio" name="pitha" id="puri"> Puri </label>
+
+        </fieldset>
+        
+        <br><br>
+
+        <fieldset>
+
+            <!-- In a checkbox tpe input, if we give the same name or different name in "name ="" " place, then we can choose all options from the option list. -->
+            <legend>Pick One Vorta</legend>
+            <label for="shorisha"> <input type="checkbox" name="vorta" id="shorisha"> Shorisha Vorta </label>
+            <label for="Shutki"><input type="checkbox" name="vorta" id="shutki"> Shutki Vorta </label>
+            <label for="Morich"> <input type="checkbox" name="vorta" id="morich"> Morich Vorta </label>
+
+        </fieldset>
+        
+        <br><br>
+
+        <fieldset>
+
+            <legend> Special Instructions </legend>
+            <textarea name="you can put any instructions here undoutly." id="" cols="15" rows="8"></textarea>
+
+
+        </fieldset><br>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit Please">
+
+    </form>
+</body>
+
+</html>
