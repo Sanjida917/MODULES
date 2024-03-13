@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment</title>
+</head>
+
+
+<body>
+
+    <h1>Please Add Your Comment</h1>
+
+    <div id="pgraphs">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aspernatur commodi omnis sapiente, accusamus
+            sed modi ut harum voluptate nemo, impedit adipisci quae tenetur pariatur magnam error similique accusantium
+            laudantium quis officiis ea! Earum ea placeat minus, optio suscipit tempora neque minima quidem blanditiis
+            saepe. Itaque magnam laudantium fugiat eius.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptas assumenda nisi, aliquid
+            blanditiis quas necessitatibus eos enim natus iste nemo unde saepe consequatur, itaque et officia quisquam
+            veniam excepturi sint vero esse? Nostrum ducimus dolorum praesentium ea suscipit obcaecati quia aliquid,
+            optio fugit. Illum deserunt cumque ab saepe soluta.</p>
+        <p >You can Share Your COMMENT Here </p>
+    </div>
+
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea><br>
+        <button id="post-button">Post</button>
+    </div>
+
+    <!-- step 01 -> click to the button
+         step 02 -> get the texts from textarea
+         step 04 -> replace the texts with the "pgraphs" id
+         step 05 -> clear the textBox
+    
+    
+    -->
+
+
+    <script>
+
+        document.getElementById('post-button').addEventListener('click', function () {
+            //function is anonymus(without function name)
+
+            const getText = document.getElementById('new-comment')
+                  getTextValue = getText.value;
+    
+            const getPara = document.getElementById('pgraphs');
+            
+            
+            const newPara = document.createElement('p');
+                  newPara.innerText = getTextValue;
+            
+                  getPara.append(newPara);
+                  getText.value = '';
+
+        });
+
+    </script>
+
+</body>
+
+</html>

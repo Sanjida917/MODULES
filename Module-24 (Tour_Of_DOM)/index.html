@@ -1,0 +1,186 @@
+<!-- DOM - - -> Document Object Models   -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of DOM</title>
+    <link rel="stylesheet" href="style/style.css">
+
+
+    <style>
+        #fruits-title {
+            color: black;
+        }
+
+        .testy-fruits {
+
+            color: sienna;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+        <h1>
+            Welcome To My DOM
+        </h1>
+    </header>
+
+
+    <main id="main-container">
+        <section>
+            <h1>Welcome To My Awesome DOM </h1>
+
+            <ul>
+                <li>Jalali Set</li>
+                <li>Shafayet</li>
+                <li>Bonobash</li>
+            </ul>
+        </section>
+
+        <section id="fruits" class="fruits-container example-cls fruit-class">
+
+            <h1 id='fruits-title'>My favourite Fruit</h1>
+            <ul>
+
+                <!-- multi selection -> ctrl+alt +any number of (uparrow)/(downarrow)  -->
+                <li class="testy-fruits">Mango</li>
+                <li class="testy-fruits">Guava</li>
+                <li class="testy-fruits">Berry</li>
+                <li class="testy-fruits">Lichi</li>
+                <li class="another-fruit">Banana</li>
+            </ul>
+
+        </section>
+
+        <section id="dream-land">
+
+            <h1 id="places-title" class="places">My Favourite Places</h1>
+
+            <ul class="place-list" id="places-list">
+
+                <li id="at-least-this-one">Saudi-Arabiya(Makka - Madina)</li>
+
+                <li class="most-desired">Switzerland</li>
+                <li class="most-desired">Celifornia</li>
+                <li class="most-desired">Maldieves</li>
+                <li class="most-desired">Nepal</li>
+                <li class="optional">Indonasia</li>
+                <li class="optional">Turkey</li>
+            </ul>
+
+        </section>
+    </main>
+
+
+
+
+
+    <!-- Internal JavaScript -->
+    <script>
+
+        console.log("Adding JS Inside the html file.");
+        <!-- console.log(document.getElementsByTagName('h1')); -->
+        console.log(document.getElementsByTagName('ul'));
+
+
+        const liCollection = document.getElementsByTagName('li');
+
+        for (const li of liCollection) {
+
+            console.log(li.innerText);
+        }
+
+        const allHeadings = document.getElementsByTagName('h1');
+
+        for (const h1 of allHeadings) {
+            console.log(h1.innerText);  //Only inner tag
+        }
+
+        //To change the title name of id "me-title"
+        document.getElementById('places-title').innerText = 'My Fav Places';
+
+
+        //To get the selected items by js from html
+        const testyFruit = document.getElementsByClassName('testy-fruits');
+        console.log(testyFruit);
+
+        for (const fruit of testyFruit) {
+
+            console.log(fruit.innerText);
+        }
+
+        console.log(document.getElementsByClassName('another-fruit'));
+        //getElementById returns a single DOM element whose ID matches your query. getElementsByClassName returns an HtmlCollection - an array-like structure containing the DOM elements that matched your query. You have to iterate through each element in the array to apply your style.
+
+
+        //Query SelectorAll
+        console.log(document.querySelectorAll('#me-title'));
+
+
+        const someLi = document.querySelectorAll('.fruits-container li');
+
+        for (const lis of someLi) {
+
+            console.log(lis.innerText);
+        }
+
+        //it console first element from the lists
+        console.log(document.querySelector('.fruits-container li'));
+
+        //we can set the colors  ->it will show all the available styles
+        console.log(document.getElementById("fruits-title").style);
+
+        //set the background color and center
+        document.getElementById("fruits-title").style.backgroundColor = 'Gray';
+        document.getElementById("fruits-title").style.textAlign = 'Center';
+
+        //we can get the attributes lists or details.
+        const fruitClasses = document.getElementById('fruits');
+        console.log(fruitClasses.getAttribute('class'));
+
+        //We can also see the class lists
+        console.log(fruitClasses.classList)
+
+        //we can remove a class
+        fruitClasses.classList.remove('fruit-class');
+        //console.log(fruitClasses.classList.remove('fruit-class'));
+        console.log(fruitClasses.classList);
+
+        //we can add a class name in aattribute
+        fruitClasses.classList.add('Purple-Heart');
+        console.log(fruitClasses.classList);
+
+        //set the tooltip by setAttribute 
+        const titlee = document.getElementById('fruits-title');
+        titlee.setAttribute('title', 'tooltip set by JavaScript');
+
+        console.log(document.getElementsByClassName('fruits-container'));
+
+        console.log(document.getElementsByClassName('fruits-container')[0]);
+        console.log(document.getElementsByClassName('fruits-container')[0].innerHTML);
+        //change the html
+        // console.log(document.getElementsByClassName('fruits-container')[0].innerHTML = '<h2> ABC Wow DOM Is Changing</h2>');
+
+        console.log(document.getElementsByClassName('fruits-container')[0].innerText);
+
+    </script>
+
+    <!-- ------------------------------Next is in dom.js------------------------------------------------ -->
+
+
+
+    <!-- External JavaScript Link -->
+    <script src="js/append.js"></script>
+    <script src="js/styleInJs.js"></script>
+
+</body>
+
+</html>

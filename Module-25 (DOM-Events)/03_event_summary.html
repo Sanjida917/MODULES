@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+
+
+<body>
+
+    <h1>FINAL DOM EVENT HANDLERS </h1>
+    <h3 id="handler-status">Default text</h3>
+
+    <p id="input-text-display">Default Input Text</p>
+    <input id="input-text" type="text">
+    <button id="button-update">Updates</button>
+
+    <!-- change the inner text of heading -->
+    <button onclick="handleOnClick()">Handle Event Add onclick Function</button>
+
+    <button id="event-listener">Handle Event By Add Event Listener</button>
+
+
+
+    <script>
+
+
+
+        //change the text of heading by onclick 
+        function handleOnClick() {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attached on onclick attribute'
+        }
+
+        //option-02
+
+        document.getElementById('event-listener').addEventListener('click', function () {
+
+            const handlrStatus = document.getElementById('handler-status');
+            handlrStatus.innerText = 'Text Updated by addEventListener By Button';
+        })
+
+
+        //option-2 recap
+
+        document.getElementById('button-update').addEventListener('click', function () {
+
+            const inputText = document.getElementById('input-text');
+            inputTxt = inputText.value;
+            const para = document.getElementById('input-text-display');
+            para.innerText = inputTxt;
+            inputText.value = '';
+            // console.log(inputText.value);
+
+        })
+    </script>
+</body>
+
+</html>

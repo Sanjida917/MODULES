@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+
+<body>
+
+    <section>
+
+        <h1>Explore Event Delegent</h1>
+
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">sit amet consectetur</li>
+            <li class="item">adipisicing elit.</li>
+            <li class="item">Iusto voluptate eos quia</li>
+            <li class="item">odio explicabo.</li>
+            <li class="item">Rem praesentium labore</li>
+            <li class="item">accusamus earum ut repudiandae</li>
+        </ul>
+
+        <button id="btn-add-item">Add Item</button>
+    </section>
+
+
+
+    <!-- --------------------------------------  JScript Started From Here  --------------------------------------------- -->
+
+    <script>
+
+        // console.log(document.getElementById('list-container'));
+
+
+        document.getElementById('list-container').addEventListener('click', function (event) {
+
+            event.target.parentNode.removeChild(event.target);
+
+        })
+
+
+        document.getElementById('btn-add-item').addEventListener('click', function () {
+
+            const listConatiner = document.getElementById('list-container');
+
+            const li = document.createElement('li');
+            li.innerText = 'new item added';
+
+            li.classList.add('item');
+            listConatiner.append(li);
+        })
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

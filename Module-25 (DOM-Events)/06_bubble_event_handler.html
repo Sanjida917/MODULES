@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Event Handler</title>
+
+    <style>
+        #item-2 {
+
+            border: 2px solid chocolate;
+            margin: 5px;
+
+        }
+
+        ul {
+
+            border: 2px solid slateblue;
+            margin: 5px;
+
+        }
+
+        body {
+
+            border: 2px solid darkgreen;
+            margin: 5px;
+
+        }
+
+        section {
+
+            border: 2px solid goldenrod;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+
+<body id="body">
+
+
+    <h1>Exploring Event Bubble</h1>
+
+    <section id="list-contaner">
+
+        <ul id="list-ul">
+            <li id="item-1">Lorem ipsum dolor sit amet.</li>
+            <li id="item-2"><b>Voluptatibus laboriosam</b></li>
+            <li id="item-3">Eos dolore id esse suscipit?</li>
+            <li id="item-4">Aspernatur dignissimos</li>
+            <li id="item-5">In necessitatibus saepe </li>
+            <li id="item-6">Inventore tempora ea est </li>
+        </ul>
+
+    </section>
+
+    <br><br>
+
+
+    <section id="list-contaner2">
+
+        <ul id="list-ul2">
+
+            <li id="item-7"><b>Voluptatibus laboriosam</b></li>
+            <li id="item-8">Eos dolore id esse suscipit?</li>
+            <li id="item-9">Aspernatur dignissimos</li>
+            <li id="item-10">In necessitatibus saepe </li>
+            <li id="item-11">Inventore tempora ea est </li>
+        </ul>
+
+    </section>
+
+
+
+    <script>
+
+        //The event handler with bubble
+        document.getElementById('item-2').addEventListener('click', function () {
+            console.log('Item 2 clicked');
+        });
+
+        document.getElementById('list-ul').addEventListener('click', function () {
+
+            console.log('ul clicked')
+        });
+
+
+        document.getElementById('list-contaner').addEventListener('click', function () {
+
+            console.log('Section Container clicked')
+        });
+
+
+        document.getElementById('body').addEventListener('click', function () {
+
+            console.log('Body of HTML clicked')
+        });
+
+
+        console.log('\n\n')
+        //Stop the bubble event handler
+
+        document.getElementById('item-7').addEventListener('click', function (event) {
+            event.stopImmediatePropagation();
+            console.log('Item 7 first clicked');
+        });
+
+        document.getElementById('item-7').addEventListener('click', function (event) {
+            event.stopPropagation()
+            console.log('Item 7 second clicked');
+        });
+        document.getElementById('item-7').addEventListener('click', function (event) {
+            event.stopPropagation();
+            console.log('Item 7 third clicked');
+        });
+        document.getElementById('item-7').addEventListener('click', function (event) {
+            event.stopPropagation();
+            console.log('Item 7 fourth clicked');
+        });
+
+        document.getElementById('list-ul2').addEventListener('click', function (event) {
+
+            event.stopPropagation();
+            console.log('ul clicked')
+        });
+
+
+        document.getElementById('list-contaner2').addEventListener('click', function (event) {
+
+            event.stopPropagation();
+            console.log('Section Container clicked')
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

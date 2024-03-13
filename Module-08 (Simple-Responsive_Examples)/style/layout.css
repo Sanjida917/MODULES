@@ -1,0 +1,98 @@
+.header,
+.nav,
+.main,
+.sidebar,
+.advertise,
+.footer {
+
+    background-color: burlywood;
+    border: 2px solid chocolate;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.header {
+    grid-area: headerr;
+}
+
+.nav {
+    grid-area: navv;
+}
+
+.main {
+    grid-area: mainn;
+}
+
+.sidebar {
+
+    grid-area: sidebarr;
+}
+
+.advertise {
+    grid-area: advertisee;
+}
+
+.footer {
+
+    grid-area: footerr;
+}
+
+.nav .lists {
+    list-style: none;
+    font-weight: 800;
+   
+}
+
+.container {
+
+    display: grid;
+    gap: 15px;
+    grid-template-areas:
+
+        "headerr  headerr  headerr  headerr"
+        "navv     mainn    mainn    sidebarr"
+        "navv     mainn    mainn    advertisee"
+        "footerr  footerr  footerr  footerr"
+    ;
+
+}
+
+
+@media screen and (max-width:576px) {
+
+    .container {
+        grid-template-areas:
+
+            "headerr"
+            "navv"
+            "mainn"
+            "sidebarr"
+            "advertisee"
+            "footerr"
+        ;
+    }
+}
+
+
+@media screen and (min-width:576px) and (max-width:992px) {
+
+    .nav .lists {
+      
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container {
+        grid-template-areas:
+
+            "headerr    headerr  headerr "
+            "navv       navv     navv"
+            "sidebarr   mainn    mainn"
+            "sidebarr   mainn    mainn"
+            "advertisee footerr  footerr"
+
+        ;
+
+    }
+}

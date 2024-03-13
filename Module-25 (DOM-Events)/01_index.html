@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENTS</title>
+</head>
+
+<body>
+
+
+    <!-- option-1 directly set the onlick -->
+    <h1 onclick="console.log('we can use itanywhere')">This Is Special Events</h1>
+    <button onclick="console.log(7)">Click Me</button>
+    <button title="this is a tooltip" onclick="console.log(65)">Another Button</button>
+
+    <!-- title is uses for tooltip -->
+    <!-- events - it is an action to happend something after click the button -->
+
+    <br><br>
+
+    <!-- We can set any style by "onclick" -->
+    <button onclick="document.body.style.backgroundColor ='pink'">Make Pinkey Pinkey</button><br><br>
+
+    <!-- option 2- set the function directly to call in html elements -->
+    <!-- add the function in onclick in a button -->
+    <button onclick="makeSky()">Make me Sky Blue</button><br><br>
+
+
+
+   
+    <!-- add the function in onclick in a button by the id-->
+    <button id="make-orange">Make Orange</button><br><br>
+
+     <!-- option -03 -->
+    <button id="make-green">Make Green</button><br><br>
+
+
+    <!-- option-04 -->
+    <!-- Event listener -->
+    <button id="make-gray">Make Gray</button><br><br>
+
+    <!-- Option-05 -->
+    <button id="make-cyan">Make Cyan</button><br><br>
+
+
+    <button id="make-goldenrod">Make Golden Rod</button><br><br>
+
+
+
+
+
+    <!-- --------------------------------------Scripting Language Starts--------------------------------- -->
+
+
+    <!-- events.js -> file.added -->
+    <script src="js/events.js"></script>
+
+    <!-- Internal Js -->
+    <script>
+
+     //01
+        //for blue button
+        function makeSky() {
+            document.body.style.backgroundColor = 'skyblue'
+        }
+
+
+        //2
+        //for orange button
+        const makeOrange = document.getElementById('make-orange');
+        makeOrange.onclick = makeOrng;
+        //only function name /not function call
+
+        function makeOrng() {
+            document.body.style.backgroundColor = 'orange';
+        }
+
+
+        //3 [We will use it some times]
+        //for green button
+        const greenButton = document.getElementById('make-green');
+        greenButton.onclick = function () {
+
+            document.body.style.backgroundColor = 'lightGreen'
+        }
+
+
+        //for Gray button with "Event-listener"
+        const grayButton = document.getElementById('make-gray')
+        grayButton.addEventListener('click', makeGray);
+
+
+        function makeGray() {
+
+            document.body.style.backgroundColor = 'lightGray';
+        }
+
+        //make cyan
+        //**Important
+        const makecyan = document.getElementById('make-cyan');
+        makecyan.addEventListener('click', function makeCyaan() {
+
+            document.body.style.backgroundColor = 'cyan';
+        })
+
+        document.getElementById('make-goldenrod').addEventListener('click', function(){
+
+            document.body.style.backgroundColor = 'goldenrod';
+        });
+
+        //function name doesn't important to write{anonymus function}
+
+    </script>
+</body>
+
+</html>

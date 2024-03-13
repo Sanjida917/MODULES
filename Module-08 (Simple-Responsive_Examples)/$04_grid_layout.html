@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Layout</title>
+
+    <style>
+
+        .container{
+            justify-content: center;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,200px) 220px;
+            grid-template-rows: 100px repeat(2,150px) 100px;
+            gap: 30px;
+           
+
+        }
+
+        .box{
+
+             border: 3px solid chocolate;
+            background-color:rgba(248, 198, 149, 0.829);
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: larger;
+           
+        }
+
+        
+
+        #box-1{
+
+            grid-column:span 5;
+        }
+
+        #box-2{
+
+            grid-row:span 2;
+        }
+
+        #box-3{
+            grid-column:span 3;
+            grid-row:span 2;
+
+        }
+
+      
+
+        #box-6{
+            grid-column:span 5;
+        }     
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box-1">
+            <h2>The Header</h2>
+        </div>
+
+        <div class="box" id="box-2">
+            
+            <nav><a href="">Nav-1</a></nav>
+            <nav><a href="">Nav-2</a></nav>
+            <nav><a href="">Nav-3</a></nav>
+
+        </div>
+
+
+        <div class="box" id="box-3">
+           
+            <h1>Main Article Area</h1>
+            <p>In this layout, we display the areas in source order for any screen less than 500 pixel wide.We go to a two column layout, and then to a three column layout by redefining the grid, And placement of the items of the grid.</p>
+
+        </div>
+
+        <div class="box" id="box-4"><h2>Sidebar</h2></div>
+        <div class="box" id="box-5"><h2>Advertising</h2></div>
+        <div class="box" id="box-6"><h2>The Footer</h2></div>
+        
+    </div>
+    
+</body>
+</html>
